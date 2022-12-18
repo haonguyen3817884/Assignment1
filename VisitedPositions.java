@@ -13,6 +13,7 @@ public class VisitedPositions {
         }
     }
 
+    // keep track all visited positions
     public void visitPosition(Position position) {
         int col = 0;
         int row = 0;
@@ -23,6 +24,7 @@ public class VisitedPositions {
         positions[row][col] = true;
     }
 
+    // check whether a position is visited or not
     public boolean isPositionVisited(Position position) {
         boolean isMoved = false;
         int col = 0;

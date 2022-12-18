@@ -9,6 +9,7 @@ public class MovedPositions {
         this.size = 1;
     }
 
+    // get position from direction
     public Position getPosition(String direction) {
         Position position = null;
 
@@ -34,6 +35,7 @@ public class MovedPositions {
         return position;
     }
 
+    // keep track current moved positions
     public void goToPlace(Position position) {
         if (head != null) {
             Position nextPosition = new Position(position.getX(), position.getY(), null);
@@ -45,6 +47,7 @@ public class MovedPositions {
         }
     }
 
+    // pop the stack
     public void getPrevious() {
         if (!isStartPosition()) {
             head = head.getNextPosition();
@@ -61,10 +64,12 @@ public class MovedPositions {
         return direction;
     }
 
+    // check whether the current position is the first position
     public boolean isStartPosition() {
         return ((head.getX() == 0) && (head.getY() == 0));
     }
 
+    // get direction from a position to another position
     public static String getDirection(Position fromPosition, Position toPosition) {
         String direction = "";
         if (fromPosition.getX() == toPosition.getX()) {

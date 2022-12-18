@@ -139,6 +139,7 @@ class Robot {
                     movedPositions.getPrevious();
                     result = maze.go(direction);
                 } else {
+                    System.out.print("There is no possible exit gate");
                     break;
                 }
             }

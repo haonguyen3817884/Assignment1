@@ -19,6 +19,11 @@ public class DirectionList {
         return direction;
     }
 
+
+
+
+
+    // update the order in direction list
     public void updateDirectionPriority(int index) {
         if (index < getDirectionListLength()) {
             String temp = directionList[0];
