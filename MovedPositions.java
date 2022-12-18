@@ -86,4 +86,8 @@ public class MovedPositions {
     public Position getHead() {
         return this.head;
     }
+
+    public int getSize() {
+        return this.size;
+    }
 }

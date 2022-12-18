@@ -143,6 +143,22 @@ class Robot {
                 }
             }
         }
+
+
+        Position[] positions = new Position[movedPositions.getSize()];
+
+        Position nextPosition = movedPositions.getHead();
+        int index = movedPositions.getSize() - 1;
+        while(nextPosition != null) {
+            positions[index] = nextPosition;
+            index = index - 1;
+            nextPosition = nextPosition.getNextPosition();
+        }
+
+        for (int i = 0; i < positions.length - 1; ++i) {
+            System.out.print(MovedPositions.getDirection(positions[i], positions[i + 1]));
+            System.out.print("\n");
+        }
     }
 }
 
